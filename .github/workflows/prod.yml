@@ -30,7 +30,5 @@ jobs:
         steps:
             - name: Pull image from docker hub
               run: sudo docker pull masprogtech2024/deploy_ghactions:latest
-            - name: Remove docker container
-              run: sudo docker rm -f deploy_ghactions
             - name: Run docker container
               run: sudo docker run -d -p 8080:8080 -e --name deploy_ghactions masprogtech2024/deploy_ghactions
